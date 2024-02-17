@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input{
+    display: none;
+}
+
+.container-gallery{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-gallery h1{
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+.container-gallery h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: rgb(85,106,117);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.top-content{
+    background-color: rgb(85,106,117);
+    width: 100%;
+    margin: 0 auto 20px auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgray;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+h3{
+    height: 100%;
+    background-color: lightgray;
+    font-size: 18px;
+    line-height: 60px;
+    padding: 0 50px;
+    color: white;
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 5px;
+    padding: 0 5px;
+    line-height: 60px;
+    font-size: 15px;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: color .5s;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+label:hover{
+    color: rgb(85,106,117);
+    background-color: #f3eeea;
+    border-radius: 5px;
+    border: solid rgb(85,106,117) 2px;
+}
+
+.photo-gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px lightgray;
+    cursor: pointer;
+    transition: .5s;
+    width: 100%;
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.house::before{
+    content: "Residencias";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.salon::before{
+    content: "Salones de Eventos";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.local-g::before{
+    content: "Locales Gastronómicos";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.oficina::before{
+    content: "Oficinas";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.remodelation::before{
+    content: "Remodelaciones";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+
+.pic:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgba(0,0,0,.4);
+    transition: .3s;
+}
+
+.pic:hover::after{
+    height: 100%;
+}
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* CHECK 1 */
+
+#check1:checked ~ .container-gallery .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+
+/*CHECK 2 */
+
+#check2:checked ~ .container-gallery .photo-gallery .house{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+#check2:checked ~ .container-gallery .photo-gallery .salon,
+#check2:checked ~ .container-gallery .photo-gallery .oficina,
+#check2:checked ~ .container-gallery .photo-gallery .remodelation,
+#check2:checked ~ .container-gallery .photo-gallery .local-g{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+}
+
+/* CHECK 3 */
+
+#check3:checked ~ .container-gallery .photo-gallery .salon{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+#check3:checked ~ .container-gallery .photo-gallery .house,
+#check3:checked ~ .container-gallery .photo-gallery .remodelation,
+#check3:checked ~ .container-gallery .photo-gallery .oficina,
+#check3:checked ~ .container-gallery .photo-gallery .local-g{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+}
+
+/* CHECK 4 */
+
+#check4:checked ~ .container-gallery .photo-gallery .local-g{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+#check4:checked ~ .container-gallery .photo-gallery .house,
+#check4:checked ~ .container-gallery .photo-gallery .remodelation,
+#check4:checked ~ .container-gallery .photo-gallery .oficina,
+#check4:checked ~ .container-gallery .photo-gallery .salon{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+}
+
+/* CHECK 5 */
+
+#check5:checked ~ .container-gallery .photo-gallery .oficina{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+#check5:checked ~ .container-gallery .photo-gallery .house,
+#check5:checked ~ .container-gallery .photo-gallery .remodelation,
+#check5:checked ~ .container-gallery .photo-gallery .local-g,
+#check5:checked ~ .container-gallery .photo-gallery .salon{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+}
+
+/* CHECK 6 */
+
+#check6:checked ~ .container-gallery .photo-gallery .remodelation{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+#check6:checked ~ .container-gallery .photo-gallery .house,
+#check6:checked ~ .container-gallery .photo-gallery .oficina,
+#check6:checked ~ .container-gallery .photo-gallery .local-g,
+#check6:checked ~ .container-gallery .photo-gallery .salon{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+}

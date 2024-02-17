@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  span{
+    color: rgb(85,106,117);
+  }
+  
+  .scroll-block{
+    height: 400px;
+  }
+  
+  .scroll-block i{
+    font-size: 30px;
+  }
+  /***********/
+  /* Counter */
+  /***********/
+  .highlight {
+     padding:20px 0;
+     font-weight:bold;
+     font-size:48px;
+  }
+  
+  .milestone-counter{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .bi-counter{
+    fill: rgb(85,106,117);
+  }
+
+  .count-text{
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(19, 19, 19);
+  }
+
+  
