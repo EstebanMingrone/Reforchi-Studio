@@ -9,7 +9,7 @@ function sendEmail(params) {
 
 
     
-    var link = "mailto:" + escape(email)
+    var link = "mailto:reforchistudio@gmail.com" + escape(email)
          + "?subject=" + escape("Contacto Reforchi Studio")
          + "&body=" + escape(mensaje);
 

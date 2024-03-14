@@ -12,7 +12,9 @@
     <link rel="shortcut icon" href="../assets/img/ReforchiLogo.png" type="image/x-icon">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../carousel.css">
     <link rel="stylesheet" href="../css/counter.css">
 
@@ -20,7 +22,45 @@
 </head>
 <body class="container-fluid m-0 p-0">
     <div class="position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <button class="btn btn-wapp py-2 d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <!-- Botón flotante -->
+  <div class="float-button">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+      Contactar
+    </button>
+  </div>
+
+  <!-- Modal de contacto -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Formulario de contacto -->
+          <form action="mailto:reforchistudio@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="contactName">Nombre:</label>
+              <input type="text" class="form-control" id="contactName" name="" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Correo electrónico:</label>
+              <input type="email" class="form-control" id="contactEmail" name="" required>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Mensaje:</label>
+              <textarea class="form-control" id="contactMessage" name="" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  
+      <button class="btn btn-wapp py-2 d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
           <svg class="my-1 theme-icon-active" width="4em" height="4em" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
             <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path class="wpp-path" fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
           </svg>
@@ -80,7 +120,7 @@
 
       <main class="container-fluid">
 
-        <div class="row featurette ">
+        <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading fw-normal lh-1">Quienes Somos<span class="text-body-secondary"> Profesionales en materializar sueños.</span></h2>
             <p class="lead">En Reforchi Studio, nuestra pasión es transformar las ideas y sueños de nuestros clientes en espacios tangibles y funcionales. Con una filosofía centrada en la comunicación abierta, la honestidad y la confiabilidad, nos comprometemos a ofrecer el más alto nivel de servicio en cada etapa del proceso de diseño y construcción. 
@@ -97,49 +137,57 @@
               </p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img src="../assets/img/about.png" class="img-fluid" alt="photo-5" width="100%" height="100%">
+            <img src="../assets/img/about.jpg" class="img-fluid p-4" alt="photo-5" width="100%" height="100%">
           </div>
         </div>
 
-        <section class="border-top container mt-3">
-          <div class="container text-center border-top" id="counter">
-            <h2 class="p-3">Nuestro trabajo en números</h2>
-            <div class="row row-cols-md-3 col-sm-1 col-md-12 d-flex justify-content-between justify-content-sm-center text-center align-items-center my-5">
-              <div class="col">
-                <div class="milestone-counter">
-                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="5em" height="5em" fill="currentColor" class="bi-counter bi-suit" viewBox="0 0 16 16">
-                    <path d="M7 0a2 2 0 0 0-2 2H1.5A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14H2a.5.5 0 0 0 1 0h10a.5.5 0 0 0 1 0h.5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2H11a2 2 0 0 0-2-2zM6 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zM3 13V3h1v10zm9 0V3h1v10z"/>
-                  </svg>
-                  <div class="milestone-details">
-                    <span class="stat-count highlight">500</span>
-                    <div class="count-text">Proyectos Terminados</div>
+        <section class="container-fluid mt-3">
+          <section id="proceso" class="py-5 steps">
+            <div class="container">
+              <h2 class="text-center mb-4">Nuestro Proceso de Trabajo</h2>
+              <div class="row d-flex justify-content-between">
+                <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card h-100">
+                    <div class="card-body d-flex justify-content-center row align-items-center">
+                      <img src="../assets/img/aboutIcons1.png" alt="visit-icon" class="img-fluid w-50">
+                      <h3 class="card-title">Paso 1: Visita Técnica</h3>
+                      <p class="card-text pb-4">Definimos necesidades y posibles alternativas para el diseño y funcionalidad.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="milestone-counter">
-                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="5em" height="5em" fill="currentColor" class="bi-counter" viewBox="0 0 16 16">
-                    <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
-                  </svg>
-                  <div class="milestone-details">
-                    <span class="stat-count highlight">820</span>
-                    <div class="count-text">Clientes Felices</div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card h-100">
+                    <div class="card-body d-flex justify-content-center row align-items-center">
+                      <img src="../assets/img/aboutIcons2.png" alt="visit-icon" class="img-fluid w-50">
+                      <h3 class="card-title">Paso 2: Relevamiento del Sector</h3>
+                      <p class="card-text pb-4">Realizamos un relevamiento exhaustivo del espacio para entender sus características.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="milestone-counter">
-                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="5em" height="5em" fill="currentColor" class="bi-counter" viewBox="0 0 16 16">
-                    <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-                  </svg>
-                  <div class="milestone-details">
-                    <span class="stat-count highlight">1232</span>
-                    <div class="count-text">Espacios Creados</div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card h-100">
+                    <div class="card-body d-flex justify-content-center row">
+                      <img src="../assets/img/aboutIcons3.png" alt="visit-icon" class="img-fluid w-50">
+                      <h3 class="card-title">Paso 3: Anteproyecto y Presentación</h3>
+                      <p class="card-text pb-4">Elaboramos un anteproyecto detallado y lo presentamos para su revisión y aprobación.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card h-100">
+                    <div class="card-body d-flex justify-content-center row">
+                      <img src="../assets/img/aboutIcons4.png" alt="visit-icon" class="img-fluid w-50">
+                      <h3 class="card-title">Paso 4: Ejecución de la Obra</h3>
+                      <p class="card-text pb-4">Llevamos a cabo la ejecución del proyecto, cuidando cada detalle para lograr el resultado deseado.</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
+          
+          
+          
           
           <div class="border-top text-center">
             <h1 class="p-3">Nuestro Equipo</h1>
@@ -150,7 +198,7 @@
               <!-- Three columns of text below the carousel -->
               <div class="row">
                 <div class="col-lg-4">
-                  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                  <img src="../assets/img/partner1.png" alt="partner1">
                   <h2 class="fw-normal">Luciana Mingrone</h2>
                   <p>
                     <em>
@@ -164,7 +212,7 @@
                   <p><a class="btn btn-secondary" href="#">Linkedin »</a></p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                  <img src="../assets/img/partner2.png" alt="partner2">
                   <h2 class="fw-normal">Heading</h2>
                   <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
                   <p><a class="btn btn-secondary" href="#">Linkedin »</a></p>
@@ -200,6 +248,9 @@
 
         <p class="col-md-4 mb-0 text-body-secondary text-center">© 2023 Reforchi Studio</p>
       </footer>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
