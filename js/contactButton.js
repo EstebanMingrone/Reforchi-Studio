@@ -6,7 +6,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var mensaje = document.getElementById('mensaje').value;
   
     Email.send({
-      SecureToken: "fc21074b-8358-4587-a1ad-26be640b108b",
+      SecureToken: "d09983ec-053a-4292-a805-a83144c32ada",
       To: 'reforchistudio@gmail.com',
       From: email,
       Subject: "Mensaje de contacto de " + nombre,
