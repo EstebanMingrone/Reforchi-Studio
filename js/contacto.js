@@ -4,7 +4,7 @@ function enviarCorreo() {
     var mensaje = document.getElementById('mensaje').value;
 
     Email.send({
-      SecureToken: "2670bbc9-690e-447c-9dd9-9ebbb744c5e5",
+      SecureToken: "fc21074b-8358-4587-a1ad-26be640b108b",
       To: 'reforchistudio@gmail.com',
       From: email,
       Subject: "Mensaje de contacto de " + nombre,
