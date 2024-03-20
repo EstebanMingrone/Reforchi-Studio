@@ -94,27 +94,31 @@
       </div>
       <div class="container container-fluid">
         <h2>Contacto</h2>
-        <div class="container-fluid d-flex justify-content-between col">
-          <div class="contact-info col-lg-3">
+        <div class="container-fluid d-flex justify-content-between row">
+          <div class="contact-info col-md-12 col-lg-4 mb-4 mb-lg-0">
             <h3>Datos de Contacto</h3>
             <p><strong>Teléfono:</strong> +54 9 11-5023-2884</p>
             <p><strong>Email:</strong> reforchistudio@gmail.com</p>
             <p><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
           </div>
-          <form class="col-lg-7">
-            <div class="form-group">
+          <form action="#" id="submit" class="form-contact col-md-12 col-lg-8">
+            <div class="form-group col-md-6 col-lg-12">
               <label for="nombre">Nombre:</label>
               <input type="text" id="nombre" required>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-6 col-lg-12">
+              <label for="tel">Teléfono:</label>
+              <input type="tel" id="tel" required>
+            </div>
+            <div class="form-group col-md-6 col-lg-12">
               <label for="email">Correo electrónico:</label>
               <input type="email" id="email" required>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-12">
               <label for="mensaje">Mensaje:</label>
               <textarea id="mensaje" required></textarea>
             </div>
-            <button class="button-form" type="button" onclick="enviarCorreo()">Enviar</button>
+            <input class="button-form col-md-12" type="submit" value="Enviar">
           </form>
         </div>
       </div>    
@@ -153,6 +157,5 @@
     </template>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="smtp.js"></script>
   </body>
 </html>
