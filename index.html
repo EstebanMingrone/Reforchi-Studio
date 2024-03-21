@@ -18,41 +18,7 @@
   <body class="container-fluid p-0 m-0">
     <div class="position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
       <!-- Botón flotante -->
-      <button class="btn btn-primary floating-btn" data-toggle="modal" data-target="#contactModal">Contacto</button>
-      <!-- Modal -->
-      <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form id="contact-form">
-                <div class="form-group">
-                  <label for="nombre">Nombre:</label>
-                  <input type="text" class="form-control" id="nombre" required>
-                </div>
-                <div class="form-group">
-                  <label for="tel">Teléfono:</label>
-                  <input type="tel" class="form-control" id="tel" required>
-                </div>
-                <div class="form-group">
-                  <label for="email">Correo electrónico:</label>
-                  <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="form-group">
-                  <label for="mensaje">Mensaje:</label>
-                  <textarea class="form-control" id="mensaje" rows="5" required></textarea>
-                </div>
-                <input class="button-form btn-primary col-md-12" type="submit" value="Enviar">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="./pages/contacto.html"><button class="btn btn-primary floating-btn" data-toggle="modal" data-target="#contactModal">Contacto</button></a>
       <!-- Botón WPP -->
       <button class="btn btn-wapp py-2 d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false">
         <a href="https://wa.me/5491150232884/?text=Hola,%20estoy%20interesado%20en%20un%20presupuesto" target="_blank" rel="noopener noreferrer">
@@ -442,8 +408,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./js/contacto.js"></script>    
   </body>
 </html>

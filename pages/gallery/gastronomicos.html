@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <script src="../../assets/js/color-modes.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Diseño de Interiores y Exteriores, Remodelaciones y Construcción de espacios soñados.">
@@ -13,7 +12,6 @@
         <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
         <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="sweetalert2.min.css">
         <link rel="stylesheet" href="../../carousel.css">
         <link rel="stylesheet" href="../../css/portfolio.css">
     </head>
@@ -21,43 +19,8 @@
     <body class="container-fluid m-0 p-0">
         <div class="position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
             <!-- Botón flotante -->
-            <div class="float-button">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
-                Contactar
-                </button>
-            </div>
+            <a href="../contacto.html"><button class="btn btn-primary floating-btn" data-toggle="modal" data-target="#contactModal">Contacto</button></a>
 
-            <!-- Modal de contacto -->
-            <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Formulario de contacto -->
-                            <form action="mailto:reforchistudio@gmail.com" method="post" enctype="text/plain">
-                                <div class="form-group">
-                                    <label for="contactName">Nombre:</label>
-                                    <input type="text" class="form-control" id="contactName" name="" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="contactEmail">Correo electrónico:</label>
-                                    <input type="email" class="form-control" id="contactEmail" name="" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="contactMessage">Mensaje:</label>
-                                    <textarea class="form-control" id="contactMessage" name="" rows="4" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <button class="btn btn-wapp py-2 d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false">
                 <a href="https://wa.me/5491150232884/?text=Hola,%20estoy%20interesado%20en%20un%20presupuesto" target="_blank" rel="noopener noreferrer">
                     <svg class="my-1 theme-icon-active" width="4em" height="4em" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
@@ -262,28 +225,9 @@
             <p class="col-md-4 mb-0 text-body-secondary text-center">© 2023 Reforchi Studio</p>
         </footer>
 
-        <template id="my-template">
-            <swal-title>
-              Mensaje envíado correctamente!
-            </swal-title>
-            <swal-button type="confirm" color="rgba(85,106,117,1)">
-              OK
-            </swal-button>
-            <swal-param name="allowEscapeKey" value="false" />
-            <swal-param
-              name="customClass"
-              value='{ "popup": "my-popup" }' />
-            <swal-function-param
-              name="didOpen"
-              value="popup => console.log(popup)" />
-        </template>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>        
         <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
         <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="smtp.js"></script>
-        <script src="../js/contacto.js"></script> 
     </body>
 </html>
