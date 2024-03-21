@@ -14,7 +14,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     `;
 
     Email.send({
-        SecureToken: "24d4b6d0-066f-4434-a874-152a86d597ba",
+        SecureToken: "5913103b-7c40-4ac1-be41-457043a1757d",
         To: 'reforchistudio@gmail.com',
         From: email,
         Subject: "Correo de contacto de " + nombre,
