@@ -4,6 +4,7 @@
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow:8px 8px 10px -7px rgba(0,0,0,0.71) ;
     -webkit-box-shadow: 8px 8px 10px -7px rgba(0,0,0,0.71);
   }
   
@@ -21,6 +22,7 @@
     padding: 20px;
     border-radius: 10px;
     color: #f3eeea;
+    box-shadow:8px 8px 10px -7px rgba(0,0,0,0.71) ;
     -webkit-box-shadow: 8px 8px 10px -7px rgba(0,0,0,0.71);
   }
   
@@ -48,6 +50,7 @@
     border-radius: 5px;
     background-color: #f3eeea;
     color: #231f20;
+    box-shadow:8px 8px 10px -7px rgba(0,0,0,0.71) ;
     -webkit-box-shadow: 8px 8px 10px -7px rgba(0,0,0,0.71);
   }
   
@@ -64,6 +67,7 @@
     color: #231f20;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow:8px 8px 10px -7px rgba(0,0,0,0.71) ;
     -webkit-box-shadow: 8px 8px 10px -7px rgba(0,0,0,0.71);
   }
   
