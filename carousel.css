@@ -111,10 +111,13 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 55rem;
-  
+  height: auto;
 }
 
+.carousel-item img{
+  max-width: 100%;
+  height: auto;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
