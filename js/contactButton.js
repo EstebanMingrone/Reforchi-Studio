@@ -21,6 +21,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       Body: ebody
   }).then(
       function(response) {
+        $('#contactModal').modal('hide');
           if (response === 'OK' || (response && response.status === 200)) { // Verificar si la solicitud fue exitosa
               Swal.fire({
                   title: 'Correo enviado',
@@ -43,6 +44,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
           icon: 'error'
       });
   });
-  $('#contactModal').modal('hide');
 });
   
